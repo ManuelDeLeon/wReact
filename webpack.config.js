@@ -1,4 +1,4 @@
-require('es6-promise').polyfill()
+//require('es6-promise').polyfill()
 var isDevBuild = process.argv.indexOf('--env.prod') < 0;
 var path = require('path');
 var webpack = require('webpack');
