@@ -18,8 +18,8 @@ module.exports = {
         loaders: [
             { test: /\.ts(x?)$/, include: /ClientApp/, loader: 'babel-loader' },
             { test: /\.tsx?$/, include: /ClientApp/, loader: 'ts', query: { silent: true } },
-            { test: /\.css$/, loader: isDevBuild ? 'style!css' : ExtractTextPlugin.extract(['css']) },
-            { test: /\.(png|jpg|jpeg|gif|svg)$/, loader: 'url', query: { limit: 25000 } }
+            { test: /\.css$/, loader: isDevBuild ? 'style!css' : ExtractTextPlugin.extract(['css']), exclude: /node_modules/ },
+            { test: /\.(png|jpg|jpeg|gif|svg)$/, loader: 'url', query: { limit: 25000 }, exclude: /node_modules/ }
         ]
     },
     plugins: [
