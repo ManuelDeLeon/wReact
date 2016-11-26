@@ -1,7 +1,7 @@
 {
   "name": "WReact",
   "version": "0.0.0",
-  "devDependencies": {
+  "dependencies": {
     "@types/history": "^2.0.39",
     "@types/isomorphic-fetch": "0.0.31",
     "@types/react": "^0.14.38",
@@ -29,11 +29,5 @@
     "url-loader": "^0.5.7",
     "webpack": "^1.13.2",
     "webpack-hot-middleware": "^2.12.2"
-  },
-  "babel": {
-    "presets": [
-      "es2015",
-      "react"
-    ]
   }
 }
