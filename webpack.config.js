@@ -1,4 +1,3 @@
-//require('es6-promise').polyfill()
 var isDevBuild = process.argv.indexOf('--env.prod') < 0;
 var path = require('path');
 var webpack = require('webpack');
@@ -16,10 +15,10 @@ module.exports = {
     },
     module: {
         loaders: [
-            { test: /\.ts(x?)$/, include: /ClientApp/, loader: 'babel-loader', exclude: /node_modules/ },
-            { test: /\.tsx?$/, include: /ClientApp/, loader: 'ts', query: { silent: true }, exclude: /node_modules/ },
-            { test: /\.css$/, loader: isDevBuild ? 'style!css' : ExtractTextPlugin.extract(['css']), exclude: /node_modules/ },
-            { test: /\.(png|jpg|jpeg|gif|svg)$/, loader: 'url', query: { limit: 25000 }, exclude: /node_modules/ }
+            { test: /\.ts(x?)$/, include: /ClientApp/, loader: 'babel-loader' },
+            { test: /\.tsx?$/, include: /ClientApp/, loader: 'ts', query: { silent: true } },
+            { test: /\.css$/, loader: isDevBuild ? 'style!css' : ExtractTextPlugin.extract(['css']) },
+            { test: /\.(png|jpg|jpeg|gif|svg)$/, loader: 'url', query: { limit: 25000 } }
         ]
     },
     plugins: [

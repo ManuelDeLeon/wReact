@@ -1,4 +1,3 @@
-//require('es6-promise').polyfill()
 var isDevBuild = process.argv.indexOf('--env.prod') < 0;
 var path = require('path');
 var webpack = require('webpack');
@@ -11,8 +10,8 @@ module.exports = {
     },
     module: {
         loaders: [
-            { test: /\.(png|woff|woff2|eot|ttf|svg)(\?|$)/, loader: 'url-loader?limit=100000', exclude: /node_modules/ },
-            { test: /\.css(\?|$)/, loader: extractCSS.extract(['css']), exclude: /node_modules/ }
+            { test: /\.(png|woff|woff2|eot|ttf|svg)(\?|$)/, loader: 'url-loader?limit=100000' },
+            { test: /\.css(\?|$)/, loader: extractCSS.extract(['css']) }
         ]
     },
     entry: {
