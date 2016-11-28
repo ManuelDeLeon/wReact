@@ -7,7 +7,7 @@
   </PropertyGroup>
   <Import Project="$(VSToolsPath)\DotNet\Microsoft.DotNet.Props" Condition="'$(VSToolsPath)' != ''" />
   <PropertyGroup Label="Globals">
-    <ProjectGuid>ab6167ac-3db2-4ec1-813e-5568a1414110</ProjectGuid>
+    <ProjectGuid>8d286673-f0f4-4088-9332-684914f3a5f4</ProjectGuid>
     <RootNamespace>WReact</RootNamespace>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
   </PropertyGroup>
